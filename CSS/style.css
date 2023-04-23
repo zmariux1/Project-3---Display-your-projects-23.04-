@@ -1,0 +1,564 @@
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: RGB(209, 218, 219);
+}
+
+.container {
+    position: absolute;
+    background-color: #E5ECE4;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    /* EQUAL SIZE- align-items: center; - a provicat ca toate itemele sa se stranga in centru 
+    si anula justify-ul copilului sa organizeze intern cu space between */
+
+    flex-direction: column;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-image: url("/img/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx */
+/* Parinte */
+.header {
+
+    max-height: 100px;
+    min-height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.allheader {
+    /* border: 1px black solid; helper */
+    /* EQUAL SIZE- aici o sa rezolv problema in care raman miniDiv-urile inguste */
+    width: 33%;
+}
+
+.header-Left {
+    display: flex;
+    align-items: center;
+}
+
+.pagelogo {
+    height: 50px;
+    width: auto;
+
+}
+
+.header-mid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.ALLhCenter {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.hyperLinkHeader {
+    margin-left: 5px;
+    color: #333533;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: 0.3s;
+}
+
+.hyperLinkHeader:hover {
+    color: #a5aaa5;
+}
+
+.header-right {
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttonCreatePlus {
+    margin-right: 20px;
+    margin-top: 0px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: none;
+    background-color: #E5ECE4;
+    color: #333533;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.buttonCreatePlus:hover {
+    color: #a5aaa5;
+}
+
+
+/* Account  */
+.buttonAccountlogin {
+    border-radius: 13px;
+    border: none;
+    height: 30px;
+    width: 80px;
+    background-color: #333533;
+    color: #E5ECE4;
+    margin-right: 20px;
+    margin-top: 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.buttonAccountlogin:hover {
+    background-color: rgba(62, 142, 65, 0.5);
+    box-shadow: 0 0 5px black,
+        0 0 10px 0 rgba(0, 0, 0, 0.8) inset,
+        0 0 20px 0 rgba(0, 0, 0, 0.4) inset,
+        0 0 30px 0 rgba(0, 0, 0, 0.2) inset;
+
+}
+
+.buttonAccountlogin:focus {
+    outline: none;
+}
+
+/* User Login popup */
+/* This is the user */
+
+
+.popupUser {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #4f614f;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    z-index: 100;
+    display: none;
+    width: 300px;
+    z-index: 600;
+}
+
+.loginTitle {
+    color: cornsilk;
+    align-items: center;
+    padding-left: 43px;
+
+}
+
+.popupUser form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.overlayUser {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 399;
+    display: none;
+    border-radius: 10px;
+
+}
+
+h2 {
+    margin-top: 0;
+    justify-items: center;
+
+}
+
+label {
+    display: block;
+    justify-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #aab1aa;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    justify-items: center;
+}
+
+.closeUser {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #aaa;
+    text-decoration: none;
+}
+
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* Parinte */
+.content {
+    /* background-color: blue; helper*/
+    height: 50%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* LAT - Aici am facut sa alinieze containerele */
+.topContainer {
+    display: flex;
+    flex-direction: row;
+    /* LAT+Inaltime - aici am reusit sa dau inaltimea, 
+    abia dupa ce am ordonat containerul de top si bot pe row  */
+    height: 45%;
+
+}
+
+.botContainer {
+    display: flex;
+    flex-direction: row;
+    /* LAT+INALTIME - aici am reusit sa dau inaltimea, 
+    abia dupa ce am ordonat containerul de top si bot pe row  */
+    height: 55%;
+}
+
+/* LAT - aici al latit mini-containerele */
+.allMiniContainer {
+    /* background-color: coral; helper*/
+    width: 35%;
+    /* border: 2px solid black; helper*/
+}
+
+.topContainer-mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    /* Nu cred ca e necesar aici width  */
+    min-width: 300px;
+}
+
+.bigTitle {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 2%;
+    z-index: 150;
+}
+
+.subTitle {
+    text-align: center;
+    margin-top: 2%;
+    font-weight: 50;
+    font-size: 14px;
+}
+
+
+
+.footer {
+    position: relative;
+    /* background-color: purple; helper*/
+    height: 44%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.followMe {
+    position: absolute;
+    background-color: rgba(229, 236, 228, 0.6);
+    border-radius: 25px;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    width: 220px;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 0 20px black,
+        0 0 10px 0 rgba(0, 0, 0, 0.8) inset,
+        0 0 20px 0 rgba(0, 0, 0, 0.4) inset,
+        0 0 30px 0 rgba(0, 0, 0, 0.2) inset;
+    transition: 0.5s;
+}
+
+.avatarImg {
+    border-radius: 50%;
+    height: 60px;
+    width: auto;
+    padding: 0px;
+}
+
+.buttonFollow {
+    height: 35px;
+    width: 70px;
+    border-radius: 20px;
+    background-color: rgb(31, 26, 26);
+    color: aliceblue;
+}
+
+.userSpace {
+    display: grid;
+}
+
+.myName {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+/* New CSS for hover and click effects */
+.followMe:hover {
+    box-shadow: 0 0 20px rgba(174, 0, 255, 0.5),
+        0 0 10px 0 rgba(0, 0, 0, 0.8) inset,
+        0 0 20px 0 rgba(0, 0, 0, 0.4) inset,
+        0 0 30px 0 rgba(0, 0, 0, 0.2) inset;
+    cursor: pointer;
+}
+
+.followMe:active {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 1.5),
+        0 0 15px 0 rgba(0, 0, 0, 0.8) inset,
+        0 0 30px 0 rgba(0, 0, 0, 0.4) inset,
+        0 0 40px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+
+
+
+
+/* START - The Main structure of the projects */
+
+.absoluteContainer {
+    position: relative;
+    width: 100%;
+}
+
+.project-box {
+    display: inline-block;
+    position: relative;
+    z-index: 100;
+}
+
+
+.project-link {
+    display: block;
+    position: relative;
+
+    overflow: hidden;
+    border-radius: 25%;
+}
+
+.project-link:hover .project-thumbnail,
+.project-link:focus .project-thumbnail {
+    transform: scale(0.95);
+    transition: transform 0.5s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-link:active .project-thumbnail {
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.project-thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    border-radius: 25%;
+}
+
+.project-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 35%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-link:hover .project-details,
+.project-link:focus .project-details {
+    transform: translateY(0%);
+}
+
+.project-title {
+    margin: 0;
+    color: white;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+.project-description {
+    margin: 0;
+    color: white;
+    font-size: 0.6em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* END - The Main structure of the projects */
+
+
+
+/* START - The unique charactersitics of the projects  */
+.project-details-T {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+    padding-top: 5px;
+}
+
+.project-link:hover .project-details-T,
+.project-link:focus .project-details-T {
+    transform: translateY(-5%);
+}
+
+.project-title-T {
+    margin: 0;
+    color: white;
+    font-size: 0.7em;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+}
+
+.project-description-T {
+    margin: 0;
+    color: white;
+    font-size: 0.6em;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* top-left project */
+.project-box-TL {
+    transform: translatey(-50%);
+    transform: translatex(0%);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.project-link-TL {
+    width: 90px;
+    height: 90px;
+}
+
+
+/* top-right project */
+.project-box-TR {
+    transform: translatey(-50%);
+    transform: translatex(150%);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.project-link-TR {
+    width: 90px;
+    height: 90px;
+}
+
+
+
+/* ______________________ */
+/* bot-left project */
+.project-box-BL {
+
+    transform: translatey(-20%);
+    margin-top: 0px;
+    margin-left: 20px;
+}
+
+.project-link-BL {
+
+    transform: translatex(80%);
+    width: 150px;
+    height: 150px;
+}
+
+
+
+/* bot-mid project */
+.project-box-BM {
+
+    transform: translatey(-20%);
+    margin-top: 70px;
+    margin-left: 10px;
+}
+
+.project-link-BM {
+    width: 150px;
+    height: 150px;
+}
+
+/* bot-right project */
+.project-box-BR {
+
+    transform: translatey(-20%);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.project-link-BR {
+    width: 150px;
+    height: 150px;
+}
+
+/* END - The unique charactersitics of the projects  */
