@@ -18,9 +18,6 @@ body {
     height: 85%;
     display: flex;
     justify-content: space-between;
-    /* EQUAL SIZE- align-items: center; - a provicat ca toate itemele sa se stranga in centru 
-    si anula justify-ul copilului sa organizeze intern cu space between */
-
     flex-direction: column;
     padding-top: 25px;
     padding-bottom: 10px;
@@ -44,8 +41,6 @@ body {
 
 
 .allheader {
-    /* border: 1px black solid; helper */
-    /* EQUAL SIZE- aici o sa rezolv problema in care raman miniDiv-urile inguste */
     width: 33%;
 }
 
@@ -234,7 +229,6 @@ input[type="submit"] {
 /* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 /* Parinte */
 .content {
-    /* background-color: blue; helper*/
     height: 50%;
     min-height: 100px;
     display: flex;
@@ -242,12 +236,10 @@ input[type="submit"] {
     align-items: stretch;
 }
 
-/* LAT - Aici am facut sa alinieze containerele */
+
 .topContainer {
     display: flex;
     flex-direction: row;
-    /* LAT+Inaltime - aici am reusit sa dau inaltimea, 
-    abia dupa ce am ordonat containerul de top si bot pe row  */
     height: 45%;
 
 }
@@ -255,16 +247,12 @@ input[type="submit"] {
 .botContainer {
     display: flex;
     flex-direction: row;
-    /* LAT+INALTIME - aici am reusit sa dau inaltimea, 
-    abia dupa ce am ordonat containerul de top si bot pe row  */
     height: 55%;
 }
 
-/* LAT - aici al latit mini-containerele */
 .allMiniContainer {
-    /* background-color: coral; helper*/
     width: 35%;
-    /* border: 2px solid black; helper*/
+
 }
 
 .topContainer-mid {
@@ -272,7 +260,6 @@ input[type="submit"] {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    /* Nu cred ca e necesar aici width  */
     min-width: 300px;
 }
 
@@ -295,7 +282,6 @@ input[type="submit"] {
 
 .footer {
     position: relative;
-    /* background-color: purple; helper*/
     height: 44%;
     display: flex;
     justify-content: space-between;
@@ -349,7 +335,6 @@ input[type="submit"] {
     font-weight: 800;
 }
 
-/* New CSS for hover and click effects */
 .followMe:hover {
     box-shadow: 0 0 20px rgba(174, 0, 255, 0.5),
         0 0 10px 0 rgba(0, 0, 0, 0.8) inset,
@@ -364,12 +349,6 @@ input[type="submit"] {
         0 0 30px 0 rgba(0, 0, 0, 0.4) inset,
         0 0 40px 0 rgba(0, 0, 0, 0.2) inset;
 }
-
-
-
-
-
-/* START - The Main structure of the projects */
 
 .absoluteContainer {
     position: relative;
