@@ -23,7 +23,7 @@ body {
     padding-bottom: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    background-image: url("img/background.png");
+    background-image: url("../img/background.png");
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -311,7 +311,7 @@ input[type="submit"] {
     transition: 0.5s;
 }
 
-.avatarImg {
+.avatar {
     border-radius: 50%;
     height: 60px;
     width: auto;
